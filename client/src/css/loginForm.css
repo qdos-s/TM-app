@@ -1,0 +1,28 @@
+.gradient-custom-4 {
+  background: #84fab0;
+
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+
+  background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+}
+
+.separatorOr {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.mainLogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 80px;
+  z-index: 9999;
+}
+
+.logoPhrase {
+  font-size: 40px;
+  color: black;
+  font-family: "Roboto Light", sans-serif;
+}

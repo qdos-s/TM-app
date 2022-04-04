@@ -1,0 +1,18 @@
+.logoImg {
+    width: 133px;
+    height: 60px;
+    margin-left: 50px;
+}
+
+.nav-link {
+    font-size: 25px;
+}
+
+.listMargin {
+    margin-right: 50px;
+}
+
+.navBg {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,121,9,1) 0%, rgba(99,232,137,1) 0%, rgba(40,164,67,0.43461134453781514) 100%);
+}

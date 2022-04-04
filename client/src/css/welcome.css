@@ -1,0 +1,30 @@
+.changeMask {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thankMsg {
+    font-size: 40px;
+    text-align: center;
+    width: 700px;
+    margin-top: -200px;
+    line-height: 48px;
+}
+
+.customBtn {
+    margin-top: 20px;
+    height: 50px;
+    width: 500px;
+    background-color: #63e889;
+    font-size: 20px;
+}
+
+.checkEmailMsg {
+    font-size: 15px;
+    line-height: 20px;
+    font-style: italic;
+    color: grey;
+}
