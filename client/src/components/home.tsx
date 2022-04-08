@@ -18,13 +18,13 @@ const Home: FC = () => {
                             ADD TIME
                         </button>
                     </Link>
-                    <Link to="/">
+                    <Link to="/my-time-entries">
                         <button type="button"
                                 className="btn btn-white customBtn">
                             MY TIME ENTRIES
                         </button>
                     </Link>
-                    <Link to="/">
+                    <Link to="/my-tasks">
                         <button type="button"
                                 className="btn btn-white customBtn">
                             MY TASKS

@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8b3f770-51e2-4a07-b9ee-8fed93410c51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/models/tasks-model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/models/times-model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/user-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/user-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/token-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/token-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service/user-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/service/user-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +92,7 @@
       <workItem from="1648698520874" duration="82836000" />
       <workItem from="1648866895135" duration="10000" />
       <workItem from="1649076998393" duration="684000" />
-      <workItem from="1649078458896" duration="3428000" />
+      <workItem from="1649078458896" duration="95247000" />
     </task>
     <task id="LOCAL-00001" summary="registration done">
       <created>1648865280777</created>
@@ -119,5 +125,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="registration done" />
     <option name="LAST_COMMIT_MESSAGE" value="registration done" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tm_app$main.coverage" NAME="main Coverage Results" MODIFIED="1649393625670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

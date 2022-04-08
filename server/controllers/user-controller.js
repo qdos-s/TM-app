@@ -65,10 +65,54 @@ class UserController {
         }
     }
 
-    async getUsers(req, res, next) {
+    async getTasks(req, res, next) {
         try {
-            const users = await userService.getAllUsers()
-            res.json(users)
+            const userData = await userService.getTasks()
+
+            return res.json(userData)
+        } catch (e) {
+            next(e)
+        }
+    }
+
+    async createTasks(req, res, next) {
+        try {
+            const {task} = req.body
+            const userData = await userService.createTasks(task)
+
+            return res.json(userData)
+        } catch (e) {
+            next(e)
+        }
+    }
+
+    async removeTask(req, res, next) {
+        try {
+            const {task} = req.body
+            const userData = await userService.removeTask(task)
+
+            return userData
+        } catch (e) {
+            next(e)
+        }
+    }
+
+    async fillTime(req, res, next) {
+        try {
+            const {date, task, hours, minutes, details} = req.body
+            const userData = await userService.fillTime(date, task, hours, minutes, details)
+
+            return userData
+        } catch (e) {
+            next(e)
+        }
+    }
+
+    async getTime(req, res, next) {
+        try {
+            const userData = await userService.getTime()
+
+            return res.json(userData)
         } catch (e) {
             next(e)
         }

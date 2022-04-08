@@ -1,4 +1,6 @@
 const UserModel = require('../models/user-model')
+const TasksModel = require('../models/tasks-model')
+const TimesModel = require('../models/times-model')
 const bcrypt = require('bcrypt')
 const uuid = require('uuid')
 const mailService = require('./mail-service')
@@ -80,9 +82,34 @@ class UserService {
         }
     }
 
-    async getAllUsers() {
-        const users = await UserModel.find()
-        return users
+    async getTasks(){
+        const tasksFromDB = await TasksModel.find()
+
+        return tasksFromDB
+    }
+
+    async createTasks(task) {
+        const tasker = await TasksModel.create({task})
+
+        return tasker
+    }
+
+    async removeTask(task) {
+        const remover = await TasksModel.deleteOne({task})
+
+        return remover
+    }
+
+    async fillTime(date, task, hours, minutes, details) {
+        const fillTime = await TimesModel.create({date, task, hours, minutes, details})
+
+        return fillTime
+    }
+
+    async getTime() {
+        const timeFromDB = await TimesModel.find()
+
+        return timeFromDB
     }
 }
 

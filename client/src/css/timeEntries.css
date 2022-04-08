@@ -1,0 +1,58 @@
+.customTable {
+    width: 800px;
+    position: absolute;
+    top: 100px;
+}
+
+.thead {
+    background: linear-gradient(
+        90deg,
+        rgba(93, 12, 255, 1) 0%,
+        rgba(155, 0, 250, 1) 100%
+    );
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    display: block;
+}
+
+tr, th {
+    border-bottom-width: 0 !important;
+}
+
+tr {
+    width: 100%;
+    display: block;
+    padding: 0 !important;
+}
+
+.tbodyContainer {
+    display: block;
+    height: 550px;
+    overflow-y: auto;
+}
+
+.thDate {
+    width: 130px;
+    padding: 1rem 1.4rem;
+}
+
+.thTime {
+    width: 130px;
+    padding: 1rem 1.4rem;
+}
+
+.thTask {
+    width: 200px;
+    padding: 1rem 1.4rem;
+}
+
+.thDetail {
+    width: 340px;
+    padding: 1rem 1.4rem;
+}
+
+.tbody {
+    width: 100%;
+    padding: 1rem 1.4rem;
+}

@@ -3,5 +3,80 @@
     justify-content: center;
     align-items: center;
     margin-top: -200px;
+    width: 600px;
     flex-wrap: wrap;
+    padding: 10px;
+}
+
+.workDateLabel {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+
+.jobDetails {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.timeCont {
+    width: 47%;
+    margin-right: 3%;
+}
+
+.tasksCont {
+    width: 47%;
+    margin-left: 3%;
+    align-self: start;
+}
+
+.tasksLabel {
+    width: 100%;
+}
+
+.hrsAndMins {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.timeBlock {
+    width: 45%;
+}
+
+.selectTime {
+    margin: 0;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.btn-custom {
+    height: 50px;
+    width: 230px;
+    font-size: 16px;
+}
+
+.selectTask {
+    height: 145px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.addTimeString {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.requiredField {
+    color: red;
+    font-style: italic;
+    font-size: 10px;
 }

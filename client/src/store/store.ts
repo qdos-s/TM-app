@@ -6,11 +6,18 @@ import {AuthResponse} from "../models/response/AuthResponse";
 import {API_URL} from "../http";
 import * as toastr from "toastr"
 import "../../node_modules/toastr/build/toastr.min.css";
+import TasksService from "../services/TasksService";
+import TimesService from "../services/TimesService";
 
 export default class Store {
     user = {} as IUser
     isAuth = false
     isLoading = false
+    task
+    date
+    hours
+    minutes
+    details
 
     constructor() {
         makeAutoObservable(this)
@@ -24,8 +31,20 @@ export default class Store {
         this.user = user
     }
 
+    setTask(task: string) {
+        this.task = task
+    }
+
     setLoading(bool: boolean) {
         this.isLoading = bool
+    }
+
+    setTime(date: string, task: string, hours: number, minutes: number, details: string) {
+        this.date = date
+        this.task = task
+        this.hours = hours
+        this.minutes = minutes
+        this.details = details
     }
 
     async login(email: string, password: string) {
@@ -81,6 +100,34 @@ export default class Store {
             console.log(e)
         } finally {
             this.setLoading(false)
+        }
+    }
+
+    async createTasks(task) {
+        try {
+            const response = await TasksService.createTasks(task)
+            this.setTask(response.data.task)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    async removeTask(task) {
+        try {
+            const response = await TasksService.removeTask(task)
+            this.setTask(response.data.task)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    async fillTime(date, task, hours, minutes, details) {
+        try {
+            const response = await TimesService.fillTime(date, task, hours, minutes, details)
+            this.setTime(response.data.date, response.data.task, response.data.hours, response.data.minutes, response.data.details)
+        } catch (e) {
+            toastr.error("Invalid data. Please fill required fields!")
+            console.log(e)
         }
     }
 }
