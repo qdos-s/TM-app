@@ -82,19 +82,15 @@ tr:last-child {
 
 @media (max-width: 1440px) {
     .customTable {
-        top: 70px;
+        top: 40px;
     }
-}
-
-@media (max-width: 1024px) {
-    .customTable {
-        top: 50px;
+    .tbodyContainer {
+        height: 450px;
     }
 }
 
 @media (max-width: 768px) {
     .customTable {
         width: 650px;
-        top: 60px;
     }
 }

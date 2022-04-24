@@ -27,11 +27,14 @@
   font-family: "Roboto Light", sans-serif;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
   .card {
     margin-top: 100px
   }
   h2.text-uppercase {
     margin: 5px !important;
+  }
+  .mainLogo {
+    margin-top: 40px;
   }
 }
