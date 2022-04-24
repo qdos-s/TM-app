@@ -8,6 +8,7 @@ import {API_URL} from "../http";
 const MyTasks: FC = () => {
     const [tasks, setTasks] = useState([] as any)
     const [userInput, setUserInput] = useState('')
+    const [userSearch, setUserSearch] = useState('')
     const {store} = useContext(Context)
 
     useEffect(() => {
@@ -46,6 +47,10 @@ const MyTasks: FC = () => {
         setUserInput(e.currentTarget.value)
     }
 
+    const handleSearchChange = (e: any) => {
+        setUserSearch(e.currentTarget.value)
+    }
+
     const handleKeyPress = (e: any) => {
         if (e.key === 'Enter') {
             handleSubmit(e)
@@ -59,24 +64,16 @@ const MyTasks: FC = () => {
                 <div className="mask gradient-custom-3 changeMask">
                     <form onSubmit={handleSubmit} className="form-class">
                         <div className="form-container">
-                            <div>
-                                <input type="text"
-                                       value={userInput}
-                                       onChange={handleChange}
-                                       onKeyDown={handleKeyPress}
-                                       className="inputText"
-                                       placeholder="Type value..."/>
-                                <button className="taskButton"
-                                        onClick={() => store.createTasks(userInput)}>
-                                    Save
-                                </button>
-                            </div>
-                            <div>
-                                <input type="search"
-                                       placeholder="Search everything"
-                                       className="inputText"/>
-                                <button className="taskButton">Search</button>
-                            </div>
+                            <input type="text"
+                                   value={userInput}
+                                   onChange={handleChange}
+                                   onKeyDown={handleKeyPress}
+                                   className="inputText"
+                                   placeholder="Type value..."/>
+                            <button className="taskButton"
+                                    onClick={() => store.createTasks(userInput)}>
+                                Save
+                            </button>
                         </div>
                         <div className="task-elements">
                             <FlipMove duration={250} easing="ease-out">

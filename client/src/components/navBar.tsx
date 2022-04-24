@@ -43,9 +43,6 @@ const NavBar: FC = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Profile</a>
-                        </li>
-                        <li className="nav-item">
                             <Link to="/"
                                   className="nav-link"
                                   onClick={() => store.logout()}>

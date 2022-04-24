@@ -24,12 +24,35 @@ tr {
     width: 100%;
     display: block;
     padding: 0 !important;
+    border-bottom-width: 1px !important;
+}
+
+tr:last-child {
+    border-bottom-width: 0 !important;
 }
 
 .tbodyContainer {
     display: block;
     height: 550px;
     overflow-y: auto;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #5d0cff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #00c6fb, #005bea);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
 }
 
 .thDate {
@@ -43,7 +66,7 @@ tr {
 }
 
 .thTask {
-    width: 200px;
+    width: 190px;
     padding: 1rem 1.4rem;
 }
 
@@ -55,4 +78,23 @@ tr {
 .tbody {
     width: 100%;
     padding: 1rem 1.4rem;
+}
+
+@media (max-width: 1440px) {
+    .customTable {
+        top: 70px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .customTable {
+        top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .customTable {
+        width: 650px;
+        top: 60px;
+    }
 }

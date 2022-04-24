@@ -1,4 +1,5 @@
 .inputText {
+  width: 80%;
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;
   border: 2px solid #5d0cff;
@@ -7,6 +8,7 @@
 }
 
 .taskButton {
+  width: 20%;
   padding: 16px 20px;
   border: none;
   border-radius: 0 4px 4px 0;
@@ -64,6 +66,23 @@
 
 .form-container {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 10px;
+}
+
+@media (max-width: 1440px) {
+  .form-class {
+    top: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form-class {
+    top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-class {
+    width: 600px;
+  }
 }

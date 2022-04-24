@@ -80,3 +80,21 @@ textarea {
     font-style: italic;
     font-size: 10px;
 }
+
+@media (max-width: 1440px) {
+    .mainContainer {
+        margin-top: -150px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .mainContainer {
+        margin-top: -140px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .mainContainer {
+        margin-top: -100px;
+    }
+}
